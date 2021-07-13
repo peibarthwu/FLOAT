@@ -10,7 +10,7 @@ export default function Home() {
     elem.setAttribute("src", image);
     elem.setAttribute("width","100%");
     elem.setAttribute("alt", "Image not available");
-    document.getElementById("image").appendChild(elem);
+    // document.getElementById("image").appendChild(elem);
   }
 
   return (
@@ -21,30 +21,33 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet"/>
       </Head>
       <h1 className={styles.title}>
           FLOAT.LAND
       </h1>
       <main className={styles.main} id="content">
-        <div className={styles.image} id="image">
-          <img src="/assets/eclipsecore.jpeg" alt="Logo" id="targetimg" width="100%"/>
+        <div>
+          {/* <img src="/assets/home/eclipsecore.jpeg" alt="Logo" id="targetimg" width="100%"/> */}
+          <video autoPlay muted loop className={styles.video} id="targetimg">         
+                <source src="/assets/home/glitchmob.mp4" type="video/mp4"/>       
+          </video>
         </div>
+
         <Link href="/work">
             <p className={styles.section} 
-            onMouseOver={() => showImage("/assets/eclipsecore.jpeg")}>
+            onMouseOver={() => showImage("/assets/home/prismaticparadise.mp4")}>
             Portfolio
             </p>
         </Link>
         <Link href="/collabs">
-            <p className={styles.section}
-            onMouseOver={() => showImage("/assets/bloom.jpeg")}>
+            <p className={styles.section}>
             Collaborations
             </p>
         </Link>
         <Link href="/clients">
             <p className={styles.section}
-            onMouseOver={() => showImage("/assets/glitchmob.png")}>
+            onMouseOver={() => showImage("/assets/home/glitchmob.mp4")}>
             Client Work
             </p>
         </Link>
