@@ -22,7 +22,8 @@ export default function Work() {
             </i>
         </h1>
         <main className={styles.main} id="content">
-        <div className={styles.card} style={{ backgroundImage: `url("/assets/work/vibrant_matter.jpg")` }}>
+        <div className={styles.paralax + ' ' + styles.project} 
+          style={{ backgroundImage: `url("/assets/work/vibrant_matter.jpg")` }}>
             <h2>
               Vibrant Matter
             </h2>
@@ -32,7 +33,8 @@ export default function Work() {
             </p>
           </div>
 
-          <div className={styles.card} style={{ backgroundImage: `url("/assets/work/prismatic_paradise.jpg")` }}>
+          <div className={styles.paralax + ' ' + styles.project} 
+          style={{ backgroundImage: `url("/assets/work/prismatic_paradise.jpg")` }}>
             <h2>
               Prismatic Paradise
             </h2>
@@ -42,7 +44,8 @@ export default function Work() {
             </p>
           </div>
 
-          <div className={styles.card} style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}>
+          <div className={styles.paralax + ' ' + styles.project} 
+          style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}>
             <h2>
               VR Screensavers
             </h2>
