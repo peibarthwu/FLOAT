@@ -20,11 +20,21 @@ export default function FirstPost() {
             </i>
         </h1>
         <main className={styles.main} id="content">
-          <div className={styles.card}>
+        
+        <div className={styles.parallaxcontainer} >
+          <div className={styles.background} >
+            <img src="/assets/clients/iancheng.jpg" alt="Logo" class="fullSizeImage"/>
+          </div>
+          <div className={styles.foreground} >
+            hey
+          </div>
+        </div>
+          <div className={styles.card}  >
             <h2>
               Ian Cheng
             </h2>
             <p>
+            <img src="/assets/clients/iancheng.jpg" alt="Logo" class="fullSizeImage"/>
                 Details ...
             </p>
           </div>
@@ -34,7 +44,7 @@ export default function FirstPost() {
               Tony Hawk
             </h2>
             <p>
-                Details ...
+            A VR time capsule with photogrammetry, holographic video, spatial audio and easter eggs.
             </p>
           </div>
 
@@ -47,12 +57,13 @@ export default function FirstPost() {
             </p>
           </div>
 
-          <div className={styles.card}>
+          <div className={styles.card} style={{ backgroundImage: `url("/assets/clients/unitednude.jpg")` }}>
             <h2>
               United Nude
             </h2>
             <p>
-                Details ...
+            {/* <img src="/assets/clients/unitednude.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
+            AR installation at  <a href="https://unitednude.com/"> United Nude's </a> pop-up in Westfield CC. Product videos, zero-G plant-life, and reactive simulations.
             </p>
           </div>
 
