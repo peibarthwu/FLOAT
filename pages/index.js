@@ -7,9 +7,13 @@ export default function Home() {
   function showImage(image){
     console.log(Image);
     var elem = document.getElementById("targetimg");
-    elem.setAttribute("src", image);
-    elem.setAttribute("width","100%");
-    elem.setAttribute("alt", "Image not available");
+    if(elem.getAttribute("src") != image){
+      elem.classList.toggle('fade');
+      elem.setAttribute("src", image);
+      elem.setAttribute("width","100%");
+      elem.setAttribute("alt", "Image not available");
+      
+    }
     // document.getElementById("image").appendChild(elem);
   }
 
@@ -23,16 +27,19 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet"/>
       </Head>
-      <h1 className={styles.title}>
-          FLOAT.LAND
-      </h1>
-      <main className={styles.main} id="content">
-        <div>
+      <div>
           {/* <img src="/assets/home/eclipsecore.jpeg" alt="Logo" id="targetimg" width="100%"/> */}
           <video autoPlay muted loop className={styles.video} id="targetimg">         
                 <source src="/assets/home/glitchmob.mp4" type="video/mp4"/>       
           </video>
-        </div>
+      </div>
+      <div className={styles.above}>
+        <h1 className={styles.title}>
+            FLOAT.LAND
+        </h1>
+      </div>
+     
+      <main className={styles.main + " " + styles.above} id="content">
 
         <Link href="/work">
             <p className={styles.section} 

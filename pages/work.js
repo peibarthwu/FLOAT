@@ -24,7 +24,8 @@ export default function Work() {
         <main className={styles.main} id="content">
         <div className={styles.paralax + ' ' + styles.project} 
           style={{ backgroundImage: `url("/assets/work/vibrant_matter.jpg")` }}>
-            <h2>
+          <div className={styles.overlay}>
+          <h2>
               Vibrant Matter
             </h2>
             <p>
@@ -32,9 +33,11 @@ export default function Work() {
             Interactive music VR experience, music by Toro y Moi. Originally partnering with Within, we are bringing this to 6dof devices.
             </p>
           </div>
+          </div>
 
           <div className={styles.paralax + ' ' + styles.project} 
           style={{ backgroundImage: `url("/assets/work/prismatic_paradise.jpg")` }}>
+            <div className={styles.overlay}>
             <h2>
               Prismatic Paradise
             </h2>
@@ -42,10 +45,12 @@ export default function Work() {
             {/* <img src="/assets/work/prismatic_paradise.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
             Part of "Summer Sweet Wave" exhibition on the massive SVLA1 screen, downtown Los Angeles.
             </p>
+            </div>
           </div>
 
           <div className={styles.paralax + ' ' + styles.project} 
           style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}>
+            <div className={styles.overlay}>
             <h2>
               VR Screensavers
             </h2>
@@ -53,6 +58,7 @@ export default function Work() {
             {/* <img src="/assets/work/vr_screensavers.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
             A nostalgic playground in AR & VR - infinite realms of the classic screen saver. 
             </p>
+            </div>
           </div>
 
           <div className={styles.card}>
