@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import FadeIn from 'react-fade-in';
+
 
 export default function FirstPost() {
   return (
@@ -10,18 +12,20 @@ export default function FirstPost() {
           <meta name="description" content="FLOAT.LAND Portfolio" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-          <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet"/>
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
         </Head>
         <h1 className={styles.title}>
+          <Link href="/">
             FLOAT.LAND 
+          </Link>
             <i>
               .Clients
             </i>
         </h1>
         <main className={styles.main} id="content">
-        
-          <div className={styles.paralax + ' ' + styles.project} 
+        <FadeIn delay={200} transitionDuration={600}>
+          <div className={ `${styles.paralax} ${styles.project}` } 
           style={{ backgroundImage: `url("/assets/clients/iancheng.jpg")` }}>
             <div className={styles.overlay}>
             <h2>
@@ -29,7 +33,7 @@ export default function FirstPost() {
             </h2>
             <p>
             {/* <img src="/assets/clients/iancheng.jpg" alt="Logo" class="fullSizeImage"/> */}
-                Details ...
+                Interaction remote for Ian Cheng&apos;s Life After B.O.B.
             </p>
             </div>
           </div>
@@ -38,7 +42,7 @@ export default function FirstPost() {
         <p>Donec non pharetra leo. Integer nec tortor nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin vitae massa iaculis, cursus lorem accumsan, iaculis libero. Phasellus consequat id lectus sit amet auctor. Maecenas tristique arcu sem, sed pretium nulla gravida ut. Nulla a dictum libero. Integer sodales fermentum enim, eu aliquet risus mollis imperdiet. Donec sit amet augue eu erat placerat auctor eget vitae purus.</p>
         </div> */}
 
-        <div className={styles.paralax + ' ' + styles.project} 
+        <div className={ `${styles.paralax} ${styles.project}` } 
           style={{ backgroundImage: `url("/assets/clients/unitednude.jpg")` }}>
           <div className={styles.overlay}>
           <h2>
@@ -46,12 +50,12 @@ export default function FirstPost() {
           </h2>
           <p>
           {/* <img src="/assets/clients/unitednude.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
-          AR installation at  <a href="https://unitednude.com/"> United Nude's </a> pop-up in Westfield CC. Product videos, zero-G plant-life, and reactive simulations.
+          AR installation at  <a href="https://unitednude.com/"> United Nudes </a> pop-up in Westfield CC. Product videos, zero-G plant-life, and reactive simulations.
           </p>
           </div>
         </div>
 
-        <div className={styles.paralax + ' ' + styles.project} 
+        <div className={ `${styles.paralax} ${styles.project}` } 
         style={{ backgroundImage: `url("/assets/clients/glitchmob.png")` }}>
             <div className={styles.overlay}>
             <h2>
@@ -62,7 +66,9 @@ export default function FirstPost() {
             </p>
             </div>
           </div>
+          </FadeIn>
 
+{/* 
           <div className={styles.card}>
             <h2>
               Tony Hawk
@@ -79,7 +85,7 @@ export default function FirstPost() {
             <p>
                 Details ...
             </p>
-          </div>
+          </div> */}
 
           
 

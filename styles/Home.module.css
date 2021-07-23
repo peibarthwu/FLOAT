@@ -9,7 +9,7 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 1.5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -24,6 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding:2%;
 }
 
 .footer a {
@@ -40,7 +41,7 @@
 .title a:hover,
 .title a:focus,
 .title a:active {
-  text-decoration: italic;
+  color: #ffffff;
 }
 
 .title {
@@ -48,6 +49,7 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4vw;
+  padding:1.15rem;
 }
 
 .title,
@@ -73,10 +75,16 @@ color: #929292;
 }
 
 .image{
-  position:fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
+  overflow: hidden;
+  width: 80vw;
+  height: 60vh;
+  position: relative;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  line-height: 1.15;
+  font-size: 3rem;
 }
 
 .fullSizeImage{
@@ -103,6 +111,15 @@ color: #929292;
   margin-top: 3rem;
 }
 
+/* PORTFOLIO STYLES  */
+.workSectionTitle{
+  color: #333333;
+  margin: 2rem 0rem 0.5rem 0rem;
+  line-height: 0.01;
+  font-size: 10vw;
+  padding:1.15rem;
+  left:0;
+}
 
 /* Parallax  */
 .paralax {
@@ -121,26 +138,33 @@ color: #929292;
   transition: color 0.15s ease, border-color 0.15s ease;
   overflow: hidden;
   width: 80vw;
-  height: 90vh;
+  height: 60vh;
   position: relative;
   margin-bottom: 3rem;
+  margin-top: 3rem;
   line-height: 1.15;
   font-size: 3rem;
 }
 
 .project h2 {
   margin: 0 0 1rem 0;
-  font-size: 3rem;
+  font-size: 2rem;
   color:#ffffff;
   padding: 1.5rem;
-
 }
 
 .project p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
   padding: 1.5rem;
+}
+
+
+.project:hover,
+.project:focus,
+.project:active {
+  color: #33ffff;
 }
 
 .overlay{
@@ -152,26 +176,18 @@ color: #929292;
 
 .info{
   margin: auto;
-  padding: 5% 15%;
+  padding: 0% 5%;
   width: 90vw;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: #9b9b9b;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-/* 
-.title:after {
-  position: absolute;
-  content: "";
-  background: #00000022;
-  width: 100%;
-  height: 100%;
-} */
-
-/* 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 5% 15%;
-} */
+.center{
+  text-align: center;
+}
 
 .card {
   margin: 1rem;
@@ -212,14 +228,32 @@ color: #929292;
   margin-left: 0.5rem;
 }
 
-.video {   
+.fullscreen {   
   position: absolute;
   z-index: 0;
   top: 0;
   left: 0;
-  width: 100%; 
-  height: 100%;
-  object-fit: fill;
+  margin:0px;
+  height:100%;
+  width: 100%;
+  object-fit: fill; 
+}
+
+.fullscreenText{
+  position: relative;
+  padding:1.15rem;
+  height: 100vh;
+  width: 90vw;
+  font-size: 2rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.relative{
+  position: relative;
 }
 
 .above{
