@@ -1,5 +1,11 @@
+import styles from '../styles/Home.module.css';
+import Head from 'next/head'
+import Link from 'next/link';
 import React, { Component } from "react";
 import * as THREE from "three";
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
+import { FilmPass } from 'three/examples/jsm/postprocessing/FilmPass.js';
 
 class ThreeScene extends Component {
 
@@ -17,7 +23,7 @@ class ThreeScene extends Component {
     const height = this.mount.clientHeight
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x0c405c);
+    scene.background = new THREE.Color(0x000000);
 
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -33,12 +39,20 @@ class ThreeScene extends Component {
     renderer.setClearColor('#000000');
     renderer.setSize(width, height);
 
-    const geometry = new THREE.PlaneGeometry(2, 5, 30, 30);
+    const composer = new EffectComposer( renderer );
+    const renderPass = new RenderPass( scene, camera );
+    composer.addPass( renderPass );
+
+    const filmpass = new FilmPass(0.7,3,3,0);
+    composer.addPass( filmpass );
+
+
+    const geometry = new THREE.PlaneGeometry(3, 10, 30, 30);
     const material = new THREE.ShaderMaterial({
     uniforms: {
     utime: { value: 0.0 },
-    width: { value: 5.0 },
-    height: { value: 1.5 },
+    width: { value: 10.0 },
+    height: { value: 3.0 },
     uTexture: { value: new THREE.TextureLoader().load("/assets/icons/logofooter.png") },
     wTexture: { value: new THREE.TextureLoader().load("/assets/icons/logofooter.png") },
     },
@@ -49,12 +63,17 @@ class ThreeScene extends Component {
 
     mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
-    mesh.position.x = -1;
+    mesh.position.x = -5;
+    mesh.position.z = -1;
+    mesh.position.y = -1;
+
+
 
     this.scene = scene;
     this.camera = camera;
     this.renderer = renderer;
     this.material = material;
+    this.composer = composer;
 
     
     this.mount.appendChild(this.renderer.domElement);
@@ -128,6 +147,11 @@ class ThreeScene extends Component {
           camera.updateProjectionMatrix();
           renderer.setSize( window.innerWidth, window.innerHeight);
     }
+
+    window.addEventListener( 'mousemove', onMouseMove, false );
+    function onMouseMove(){
+      material.uniforms.utime.value +=0.009;
+    }
   }
 
 
@@ -153,20 +177,55 @@ class ThreeScene extends Component {
   }
 
   renderScene() {
-    this.renderer.render(this.scene, this.camera);
-    this.material.uniforms.utime.value +=0.007;
+    // this.renderer.render(this.scene, this.camera);
+    this.composer.render();
+    this.material.uniforms.utime.value += 0.003;
 
   }
 
   render() {
     return (
+      <div className={styles.container}>
       <div
-        style={{ width: '100%', height: '100vh' }}
+        className={styles.fullscreen}
         ref={(mount) => { this.mount = mount }}
       />
+      <Head>
+        <title>Float.Land</title>
+        <meta name="description" content="FLOAT.LAND Portfolio" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />      
+      </Head>
+      <div className={styles.above}>
+        <h1 className={styles.title}>
+            FLOAT.LAND
+        </h1>
+      </div>
+      <main className={styles.above}>
+        <Link href="/work">
+            <p className={styles.section} 
+            >
+            Portfolio
+            </p>
+        </Link>
+        <Link href="/research">
+            <p className={styles.section}>
+            Research
+            </p>
+        </Link>
+        <Link href="/about">
+            <p className={styles.section}>
+            About
+            </p>
+        </Link>
+      </main>
+      </div>
     )
   }
 }
 
 
 export default ThreeScene;
+

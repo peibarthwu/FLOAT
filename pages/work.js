@@ -22,7 +22,7 @@ export default function Work() {
               FLOAT.LAND 
               </Link>
               <i>
-                <Link href="#worksection">.Portfolio</Link>
+                <Link href="#worksection">.Work</Link>
                 <Link href="#clientsection">.Clients</Link>
                 <Link href="#collabsection">.Collabs</Link>
               </i>
@@ -93,7 +93,9 @@ export default function Work() {
              Liminal Realities
             </h2>
             <p>
-            {/* <img src="/assets/work/vr_screensavers.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
+            3VR: Liminal Realities is an exploration of visual music and optical illusion. Originally titled THREE² x 3P2: VR, the piece was first created for UFO Gallery&apos;s inaugural Pop-Up show, hosted in the former Perry Rubenstein gallery.
+
+It has been curated into various showcases including the Toronto Film Festival&apos;s TIFFxPOP series, Oculus DevLab, Slamdance, SXSW, and VR Scout&apos;s VR Art Show, hosted by VICE and Pulse.
             </p>
             </div>
           </div>
@@ -164,7 +166,9 @@ export default function Work() {
           FLOAT Museum @ SFMOMA
           </h2>
           <p>
-          First seen at SFMOMA, the FLOAT Museum radically transforms the museum experience.
+          No longer limited by the constraints of physical reality, FLOAT reinvents the museum experience by transforming our relationship to art and architecture.
+
+          FLOAT MUSEUM was piloted as part of PlaySFMOMA&apos;s daylong Mixed Reality Pop-up Arcade at the San Francisco Museum of Modern Art. 
           </p>
           </div>
         </div>
@@ -177,7 +181,10 @@ export default function Work() {
               </h2>
               <p>
               {/* <img src="/assets/work/vibrant_matter.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
+              Vibrant Matter, one of the earliest nongaming VR experiences to experiment with interactivity on phone-powered headsets, premiered at SXSW 2017.
+
               Interactive music VR experience, music by Toro y Moi. Originally partnering with Within, we are bringing this to 6dof devices.
+
               </p>
           </div>
         </div>

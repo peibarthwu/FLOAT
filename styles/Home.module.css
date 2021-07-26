@@ -66,12 +66,16 @@
 *  Home page section titles
 */
 .section {
+  text-align: left;
+  margin: 1.15rem;
+  padding-top: 3%;
   line-height: 1;
-  font-size: 1.5rem;
+  font-size: 5vh;
+  color: #5ea9ff;
 }
 
 .section:hover{
-color: #929292;
+color: #ffffff;
 }
 
 .image{
@@ -155,7 +159,7 @@ color: #929292;
 
 .project p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   padding: 1.5rem;
 }
