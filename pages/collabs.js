@@ -6,24 +6,18 @@ import FadeIn from 'react-fade-in';
 
 export default function Collabs() {
   return (
-      <div className={styles.container}>
-        <Head>
-          <title>Float.Land</title>
-          <meta name="description" content="FLOAT.LAND Portfolio" />
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="preconnect" href="https://fonts.googleapis.com"/>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
-        </Head>
-        <h1 className={styles.title}>
-          <Link href="/">
-            FLOAT.LAND 
-            </Link>
-            <i>
-              .Collabs
-            </i>
-        </h1>
-        <main className={styles.main} id="content">
+    // <div className={ `${styles.paralax} ${styles.project}` } 
+    //   style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}>
+    //     <div className={styles.overlay}>
+    //     <h2>
+    //     FLOAT Museum @ SFMOMA
+    //     </h2>
+    //     <p>
+    //     First seen at SFMOMA, the FLOAT Museum radically transforms the museum experience.
+    //     </p>
+    //     </div>
+    //   </div>
+        <div className={styles.main} id="content">
         <FadeIn delay={200} transitionDuration={600}>
 
         <div className={ `${styles.paralax} ${styles.project}` } 
@@ -51,7 +45,7 @@ export default function Collabs() {
           </div>
         </div>
 
-        <Link href="/screensavers">
+        {/* <Link href="/screensavers"> */}
         <div className={ `${styles.paralax} ${styles.project}` } 
           style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}>
             <div className={styles.overlay}>
@@ -64,17 +58,11 @@ export default function Collabs() {
             </p>
             </div>
           </div>
-          </Link>
+          {/* </Link> */}
           </FadeIn>
 
-        </main>
+        </div>
 
-        <footer className={styles.footer}>
-            Footer text here{' '}
-            <span className={styles.logo}>
-              {/* <Image src="/logo.png" alt="FLOAT Logo" width={72} height={16} /> */}
-            </span>
-        </footer>
-      </div>
+       
   )
 }

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import FadeIn from 'react-fade-in';
+import Collabs from './/collabs';
 
 
 
@@ -27,17 +28,17 @@ export default function Work() {
                 <Link href="#collabsection">.Collabs</Link>
               </i>
       </h1>
-      <div className={styles.fullscreenText}>
+      {/* <div className={styles.fullscreenText}>
           <p>
             FLOAT LAND is a pioneering studio which innovates across digital media including video, VR, AR, and more. We develop awe-inspiring experiences from end-to-end, and provide targeted services for businesses and platforms wanting more interactive, impactful projects.
           </p>
-        </div>
+        </div> */}
       </div>
-      <div>
+      {/* <div>
           <video autoPlay muted loop className={styles.fullscreen} id="targetimg">         
-                <source src="/assets/home/glitchmob.mp4" type="video/mp4"/>       
+                <source src="/assets/home/prismaticparadise.mp4" type="video/mp4"/>       
           </video>
-      </div>
+      </div> */}
 
     
       <div className={styles.above}>
