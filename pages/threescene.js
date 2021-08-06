@@ -23,7 +23,7 @@ class ThreeScene extends Component {
     const height = this.mount.clientHeight
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x000000);
+    scene.background = new THREE.Color(0x2679ff);
 
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -36,14 +36,13 @@ class ThreeScene extends Component {
  		scene.add( light );
     
     camera.position.z = 4;
-    renderer.setClearColor('#000000');
     renderer.setSize(width, height);
 
     const composer = new EffectComposer( renderer );
     const renderPass = new RenderPass( scene, camera );
     composer.addPass( renderPass );
 
-    const filmpass = new FilmPass(0.7,3,3,0);
+    const filmpass = new FilmPass(0.3,3,3,0);
     composer.addPass( filmpass );
 
 
@@ -198,29 +197,7 @@ class ThreeScene extends Component {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />      
       </Head>
-      <div className={styles.above}>
-        <h1 className={styles.title}>
-            FLOAT.LAND
-        </h1>
-      </div>
-      <main className={styles.above}>
-        <Link href="/work">
-            <p className={styles.section} 
-            >
-            Portfolio
-            </p>
-        </Link>
-        <Link href="/research">
-            <p className={styles.section}>
-            Research
-            </p>
-        </Link>
-        <Link href="/about">
-            <p className={styles.section}>
-            About
-            </p>
-        </Link>
-      </main>
+
       </div>
     )
   }

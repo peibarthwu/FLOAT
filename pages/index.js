@@ -233,6 +233,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import Portfolio from './/portfolio';
 
 
 
@@ -293,22 +294,17 @@ export default function Home() {
         </h1>
       </div>
       
-      <main className={styles.main + " " + styles.above} id="content">
-        <Link href="/work">
-            <p className={styles.section} 
-           >
-            Portfolio
-            </p>
-        </Link>
+      <main className={styles.above} id="content">
+        <Portfolio/>
         <Link href="/research">
-            <p className={styles.section}>
+            <div className={styles.section}>
             Research
-            </p>
+            </div>
         </Link>
         <Link href="/about">
-            <p className={styles.section}>
+            <div className={styles.section}>
             About
-            </p>
+            </div>
         </Link>
       </main>
 

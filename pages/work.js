@@ -3,55 +3,36 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import FadeIn from 'react-fade-in';
 import Collabs from './/collabs';
+import React, { Component } from "react";
 
 
+class Work extends Component {
+  constructor() {
+    super();
 
-export default function Work() {
-  return (
-      <div className={styles.container}>
-        <Head>
-          <title>Float.Land</title>
-          <meta name="description" content="FLOAT.LAND Portfolio" />
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="preconnect" href="https://fonts.googleapis.com"/>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
-      </Head>
-      <div className={ `${styles.above} ${styles.relative}`}>
-      <h1 className={styles.title}>
-              <Link href="/">
-              FLOAT.LAND 
-              </Link>
-              <i>
-                <Link href="#worksection">.Work</Link>
-                <Link href="#clientsection">.Clients</Link>
-                <Link href="#collabsection">.Collabs</Link>
-              </i>
-      </h1>
-      {/* <div className={styles.fullscreenText}>
-          <p>
-            FLOAT LAND is a pioneering studio which innovates across digital media including video, VR, AR, and more. We develop awe-inspiring experiences from end-to-end, and provide targeted services for businesses and platforms wanting more interactive, impactful projects.
-          </p>
-        </div> */}
-      </div>
-      {/* <div>
-          <video autoPlay muted loop className={styles.fullscreen} id="targetimg">         
-                <source src="/assets/home/prismaticparadise.mp4" type="video/mp4"/>       
-          </video>
-      </div> */}
+    this.state = {
+      show: false,
+      popupid: null
+    };
 
-    
-      <div className={styles.above}>
-        <h1 className={styles.workSectionTitle}>
-          <a id="worksection">
-              Work
-          </a>
-        </h1>
+    this.showPopup = this.showPopup.bind(this);
 
+  }
+
+  showPopup(id){
+    this.setState({
+      show: !this.state.show,
+    });
+  }
+
+  render(){ 
+    return(
+    <div className={styles.above}>
     <div className={styles.main}>
-        <FadeIn delay={200} transitionDuration={600}>
           <div className={ `${styles.paralax} ${styles.project}` } 
-          style={{ backgroundImage: `url("/assets/work/prismatic_paradise.jpg")` }}>
+          style={{ backgroundImage: `url("/assets/work/prismatic_paradise.jpg")` }}
+          onClick={this.showPopup}
+          >
             <div className={styles.overlay}>
             <h2>
               Prismatic Paradise
@@ -62,6 +43,9 @@ export default function Work() {
             </p>
             </div>
           </div>
+          {this.state.show ? <div className={`${styles.overlay} ${styles.fullscreen}`}>
+          <div className={styles.popup}> heyyy</div> </div> : null} 
+
 
           <div className={ `${styles.paralax} ${styles.project}` } 
           style={{ backgroundImage: `url("/assets/work/eclipse_core.jpg")` }}>
@@ -100,120 +84,9 @@ It has been curated into various showcases including the Toronto Film Festival&a
             </p>
             </div>
           </div>
-          </FadeIn>
       </div>
-
-      <h1 className={styles.workSectionTitle}>
-      <a id="clientsection">
-          Clients
-      </a>
-      </h1>
-
-      <div className={styles.main}>
-      <FadeIn delay={200} transitionDuration={600}>
-        <div className={ `${styles.paralax} ${styles.project}` } 
-          style={{ backgroundImage: `url("/assets/clients/iancheng.jpg")` }}>
-            <div className={styles.overlay}>
-            <h2>
-              Ian Cheng
-            </h2>
-            <p>
-            {/* <img src="/assets/clients/iancheng.jpg" alt="Logo" class="fullSizeImage"/> */}
-                Interaction remote for Ian Cheng&apos;s Life After B.O.B.
-            </p>
-            </div>
-          </div>
-
-        <div className={ `${styles.paralax} ${styles.project}` } 
-          style={{ backgroundImage: `url("/assets/clients/unitednude.jpg")` }}>
-          <div className={styles.overlay}>
-          <h2>
-            United Nude
-          </h2>
-          <p>
-          {/* <img src="/assets/clients/unitednude.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
-          AR installation at  <a href="https://unitednude.com/"> United Nudes </a> pop-up in Westfield CC. Product videos, zero-G plant-life, and reactive simulations.
-          </p>
-          </div>
-        </div>
-
-        <div className={ `${styles.paralax} ${styles.project}` } 
-        style={{ backgroundImage: `url("/assets/clients/glitchmob.png")` }}>
-            <div className={styles.overlay}>
-            <h2>
-              Glitchmob x Strangeloop
-            </h2>
-            <p>
-                Details ...
-            </p>
-            </div>
-          </div>
-          </FadeIn>
       </div>
-
-      <h1 className={styles.workSectionTitle}>
-          <a id="collabsection">
-              Collabs
-          </a>
-      </h1>
-      <div className={styles.main}>
-      <FadeIn delay={200} transitionDuration={600}>
-          
-
-          <div className={ `${styles.paralax} ${styles.project}` } 
-        style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}>
-          <div className={styles.overlay}>
-          <h2>
-          FLOAT Museum @ SFMOMA
-          </h2>
-          <p>
-          No longer limited by the constraints of physical reality, FLOAT reinvents the museum experience by transforming our relationship to art and architecture.
-
-          FLOAT MUSEUM was piloted as part of PlaySFMOMA&apos;s daylong Mixed Reality Pop-up Arcade at the San Francisco Museum of Modern Art. 
-          </p>
-          </div>
-        </div>
-
-        <div className={ `${styles.paralax} ${styles.project}` } 
-        style={{ backgroundImage: `url("/assets/work/vibrant_matter.jpg")` }}>
-          <div className={styles.overlay}>
-            <h2>
-                Vibrant Matter
-              </h2>
-              <p>
-              {/* <img src="/assets/work/vibrant_matter.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
-              Vibrant Matter, one of the earliest nongaming VR experiences to experiment with interactivity on phone-powered headsets, premiered at SXSW 2017.
-
-              Interactive music VR experience, music by Toro y Moi. Originally partnering with Within, we are bringing this to 6dof devices.
-
-              </p>
-          </div>
-        </div>
-
-        <Link href="/screensavers">
-        <div className={ `${styles.paralax} ${styles.project}` } 
-          style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}>
-            <div className={styles.overlay}>
-            <h2>
-              VR Screensavers
-            </h2>
-            <p>
-            {/* <img src="/assets/work/vr_screensavers.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
-            A nostalgic playground in AR and VR - infinite realms of the classic screen saver. 
-            </p>
-            </div>
-          </div>
-          </Link>
-          </FadeIn>
-        </div>        
-
-        <footer className={styles.footer}>
-            Footer text here{' '}
-            <span className={styles.logo}>
-              {/* <Image src="/logo.png" alt="FLOAT Logo" width={72} height={16} /> */}
-            </span>
-        </footer>
-      </div>
-    </div>
-  )
+  );
 }
+}
+export default  Work ;
