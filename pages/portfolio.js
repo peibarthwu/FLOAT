@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import Collabs from './/collabs';
 import Clients from './/clients';
 import Work from './/work';
+import Link from 'next/link'
 
 import React, { Component } from "react";
 import Expand from 'react-expand-animated';
@@ -93,28 +94,35 @@ class Portfolio extends Component {
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
         </Head>
         <div>
-          <div className={styles.section} onClick={this.handleClickWork}>
-            Work
-              <Expand open={this.state.work} duration={800}>
-               <Work />
-              </Expand>
+          <div className={styles.section}>
+            <p onClick={this.handleClickWork}>
+              Work
+          </p>
           </div>
+          <Expand open={this.state.work} duration={800}>
+            <Work />
+          </Expand>
 
           {/* {this.state.work ? <Work /> : null} */}
         </div>
-        <div className={styles.section} onClick={this.handleClickClients}>
-          Clients
-          <Expand open={this.state.clients} duration={800}>
-               <Clients />
-              </Expand>
-            </div>
-        <div className={styles.section} onClick={this.handleClickCollabs}>
-          Collabs
-          <Expand open={this.state.collabs} duration={800}>
-               <Collabs />
-              </Expand>
-            </div>
+        <div className={styles.section} >
+          <p onClick={this.handleClickClients}>
+            Clients
+          </p>
 
+        </div>
+        <Expand open={this.state.clients} duration={800}>
+          <Clients />
+        </Expand>
+        <div className={styles.section} >
+          <p onClick={this.handleClickCollabs}>
+            Collabs
+          </p>
+
+        </div>
+        <Expand open={this.state.collabs} duration={800}>
+          <Collabs />
+        </Expand>
       </div>
 
 

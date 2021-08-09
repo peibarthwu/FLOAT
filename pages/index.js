@@ -298,12 +298,16 @@ export default function Home() {
         <Portfolio/>
         <Link href="/research">
             <div className={styles.section}>
-            Research
+              <p>
+              Research
+              </p>
             </div>
         </Link>
         <Link href="/about">
             <div className={styles.section}>
-            About
+              <p>
+              About
+              </p>
             </div>
         </Link>
       </main>
