@@ -58,9 +58,21 @@ export default class ProjModal extends React.Component {
     super(props);
   }
 
+  componentDidMount() {    
+    if(this.props.modalIsOpen){
+      console.log("opened");
+      document.body.style.overflow = 'hidden';
+    }    
+  }
+  
+  componentWillUnmount() {
+      document.body.style.overflow = 'unset';
+  }
+
 
   render() {
     return (
+      <React.Fragment>
       <Modal
               isOpen={this.props.modalIsOpen}
               onRequestClose={this.props.closeModal}
@@ -76,6 +88,7 @@ export default class ProjModal extends React.Component {
                 </div>
               </div>
       </Modal>      
+      </React.Fragment>
     )
   }
 }

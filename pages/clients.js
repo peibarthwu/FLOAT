@@ -77,7 +77,7 @@ class Clients extends Component {
               <h2>
                 Ian Cheng
             </h2>
-              <p>
+            <p className={styles.hide}>
                 Interaction remote for Ian Cheng&apos;s Life After B.O.B.
             </p>
             </div>
@@ -90,7 +90,7 @@ class Clients extends Component {
               <h2>
                 United Nude
           </h2>
-              <p>
+          <p className={styles.hide}>
                 AR installation at  <a href="https://unitednude.com/"> United Nudes </a> pop-up in Westfield CC. Product videos, zero-G plant-life, and reactive simulations.
           </p>
             </div>
@@ -102,7 +102,7 @@ class Clients extends Component {
               <h2>
                 Glitchmob x Strangeloop
             </h2>
-              <p>
+            <p className={styles.hide}>
                 Details ...
             </p>
             </div>

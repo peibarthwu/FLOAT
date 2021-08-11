@@ -94,11 +94,15 @@ class Collabs extends Component {
         id ="floatmuseum"
         >
           <div className={styles.overlay} onClick={() => this.openModal(1) }>
-          <h2> 
+          <h2 > 
           FLOAT Museum @ SFMOMA
           </h2>
+          <p className={styles.hide}>
+              Interactive music VR experience, music by Toro y Moi. Originally partnering with Within, we are bringing this to 6dof devices.
+          </p>
           </div>
           
+
         </div>
         
         <div className={ `${styles.paralax} ${styles.project}` } 
@@ -109,7 +113,7 @@ class Collabs extends Component {
             <h2>
                 Vibrant Matter
               </h2>
-              <p>
+              <p className={styles.hide}>
               {/* <img src="/assets/work/vibrant_matter.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
               Interactive music VR experience, music by Toro y Moi. Originally partnering with Within, we are bringing this to 6dof devices.
               </p>
@@ -123,7 +127,7 @@ class Collabs extends Component {
             <h2>
               VR Screensavers
             </h2>
-            <p>
+            <p className={styles.hide}>
             {/* <img src="/assets/work/vr_screensavers.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
             A nostalgic playground in AR and VR - infinite realms of the classic screen saver. 
             </p>
