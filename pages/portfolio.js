@@ -96,7 +96,7 @@ class Portfolio extends Component {
         <div>
           <div className={styles.section}>
             <p onClick={this.handleClickWork}>
-              Work
+              WORK
           </p>
           </div>
           <Expand open={this.state.work} duration={800}>
@@ -107,7 +107,7 @@ class Portfolio extends Component {
         </div>
         <div className={styles.section} >
           <p onClick={this.handleClickClients}>
-            Clients
+            CLIENTS
           </p>
 
         </div>
@@ -116,7 +116,7 @@ class Portfolio extends Component {
         </Expand>
         <div className={styles.section} >
           <p onClick={this.handleClickCollabs}>
-            Collabs
+            COLLABS
           </p>
 
         </div>

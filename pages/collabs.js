@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css'
 import FadeIn from 'react-fade-in';
 import React, { Component } from "react";
 import ProjModal from './/modals';
+import Expand from 'react-expand-animated';
 
 
 const customStyles = {
@@ -85,21 +86,23 @@ class Collabs extends Component {
   render() {
 
       return (
-        <div className={styles.main} id="content">
-
+        <div className={`${styles.main} ${styles.blackBackground}`}>
+        
 
         <FadeIn delay={200} transitionDuration={600}>
         <div className={ `${styles.paralax} ${styles.project}`} 
         style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}
         id ="floatmuseum"
+        onClick={() => this.openModal(1) }
         >
-          <div className={styles.overlay} onClick={() => this.openModal(1) }>
+          <div className={styles.overlay} >
           <h2 > 
           FLOAT Museum @ SFMOMA
           </h2>
           <p className={styles.hide}>
               Interactive music VR experience, music by Toro y Moi. Originally partnering with Within, we are bringing this to 6dof devices.
           </p>
+          
           </div>
           
 
@@ -108,22 +111,25 @@ class Collabs extends Component {
         <div className={ `${styles.paralax} ${styles.project}` } 
         style={{ backgroundImage: `url("/assets/work/vibrant_matter.jpg")` }}
         id ="vibrant_matter"
+        onClick={() => this.openModal(2) }
         >
-          <div className={styles.overlay} onClick={() => this.openModal(2) }>
-            <h2>
+          <div className={styles.overlay} >
+          <h2>
                 Vibrant Matter
               </h2>
               <p className={styles.hide}>
               {/* <img src="/assets/work/vibrant_matter.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
               Interactive music VR experience, music by Toro y Moi. Originally partnering with Within, we are bringing this to 6dof devices.
               </p>
+              
           </div>
         </div>
 
         {/* <Link href="/screensavers"> */}
         <div className={ `${styles.paralax} ${styles.project}` } 
-          style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}>
-          <div className={styles.overlay} onClick={() => this.openModal(3) }>
+          style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}
+          onClick={() => this.openModal(3) }>
+          <div className={styles.overlay} >
             <h2>
               VR Screensavers
             </h2>

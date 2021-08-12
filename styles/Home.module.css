@@ -68,10 +68,11 @@
 */
 .section {
   text-align: center;
-  margin: 1.15rem;
-  line-height: 1;
+  line-height: 0.7;
   font-size: 5vh;
-  color: #000000;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
 }
 
 .section:hover{
@@ -154,7 +155,7 @@ color: #1eb8b8;
   font-size: 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 .project h2 {
@@ -169,6 +170,7 @@ color: #1eb8b8;
   font-size: 1.5rem;
   line-height: 1.5;
   padding: 1.5rem;
+  position: absolute;
 }
 
 .project:hover,
@@ -178,28 +180,33 @@ color: #1eb8b8;
 }
 
 .hide{
-  margin: 0;
+  padding: 0 0 2rem 0;
   font-size: 1.5rem;
   line-height: 1.5;
-  padding: 1.5rem;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.7s linear;
+  height: 100%;
 }
 
 .overlay{
-  /* background-color: black;
-  opacity: 0.4; */
-  width: 100%;
+  background-color: black;
+  visibility: hidden;
+  opacity: 0;
+  width: 50%;
   height: 100%;
+  transition: visibility 0s, opacity 0.7s linear;
   position: absolute;
 }
 
-
-
-.project:hover .hide {
+.project:hover .hide{
   visibility: visible;
-  opacity: 1;
+  opacity: 0.5;
+}
+
+.project:hover .overlay{
+  visibility: visible;
+  opacity: 0.5;
 }
 
 .info{
@@ -217,38 +224,6 @@ color: #1eb8b8;
   text-align: center;
 }
 
-.card {
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  overflow: hidden;
-  width: 90vw;
-  height: 90vh;
-  background-size: 100%;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 3rem;
-  color:#ffffff;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
 
 .logo {
   height: 1em;
@@ -277,22 +252,44 @@ color: #1eb8b8;
   z-index: 1;
 }
 
+.left{
+  text-align: left;
+}
 
-
-
-/* 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-} */
+.three {   
+  z-index: 0;
+  top: 0;
+  left: 0;
+  margin:0px;
+  height:100%;
+  width: 100%;
+  object-fit: fill; 
+  overflow: hidden;
+  position: fixed;
+}
 
 /* /*
-MODAL
+ABOUT
 *
 / */
 
-.z4{
-  z-index: 4;
+.aboutSection h2{
+  font-size: 8vw;
+  line-height: 1.15;
+  font-size: 4vw;
+  margin-bottom: 0%;
+  color: #585858;
+}
+
+.aboutSection h2:hover{
+  color: #1eb8b8;
+}
+
+.aboutSection h1{
+  color: #1eb8b8;
+  font-size: 2vw;
+}
+
+.aboutSection p{
+  font-size: 1.5vw;
 }

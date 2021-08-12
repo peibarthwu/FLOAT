@@ -23,7 +23,7 @@ class ThreeScene extends Component {
     const height = this.mount.clientHeight
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x2679ff);
+    scene.background = new THREE.Color(0x000000);
 
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -46,14 +46,14 @@ class ThreeScene extends Component {
     composer.addPass( filmpass );
 
 
-    const geometry = new THREE.PlaneGeometry(3, 10, 30, 30);
+    const geometry = new THREE.PlaneGeometry(30, 60, 30, 30);
     const material = new THREE.ShaderMaterial({
     uniforms: {
     utime: { value: 0.0 },
-    width: { value: 10.0 },
-    height: { value: 3.0 },
-    uTexture: { value: new THREE.TextureLoader().load("/assets/icons/logofooter.png") },
-    wTexture: { value: new THREE.TextureLoader().load("/assets/icons/logofooter.png") },
+    width: { value: 60.0 },
+    height: { value: 30.0 },
+    uTexture: { value: new THREE.TextureLoader().load("/assets/clients/glitchmob.png") },
+    wTexture: { value: new THREE.TextureLoader().load("/assets/clients/glitchmob.png") },
     },
     vertexShader: vertexShader(),
     fragmentShader: fragmentShader(),
@@ -62,9 +62,9 @@ class ThreeScene extends Component {
 
     mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
-    mesh.position.x = -5;
+    mesh.position.x = -30;
     mesh.position.z = -1;
-    mesh.position.y = -1;
+    mesh.position.y = -10;
 
 
 
@@ -134,7 +134,7 @@ class ThreeScene extends Component {
               
               float shadow = clamp(zpos / 10., 0., 1.);
               gl_FragColor = vec4(texture + shadow, 1.);
-              gl_FragColor.a = 0.7;
+              gl_FragColor.a = 0.5;
 
           }
       `
@@ -184,21 +184,10 @@ class ThreeScene extends Component {
 
   render() {
     return (
-      <div className={styles.container}>
       <div
-        className={styles.fullscreen}
+        className={styles.three}
         ref={(mount) => { this.mount = mount }}
       />
-      <Head>
-        <title>Float.Land</title>
-        <meta name="description" content="FLOAT.LAND Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />      
-      </Head>
-
-      </div>
     )
   }
 }
