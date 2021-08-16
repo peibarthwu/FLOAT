@@ -95,6 +95,9 @@ class Collabs extends Component {
         id ="floatmuseum"
         onClick={() => this.openModal(1) }
         >
+          <h2 > 
+          FLOAT Museum @ SFMOMA
+          </h2>
           <div className={styles.overlay} >
           <h2 > 
           FLOAT Museum @ SFMOMA
@@ -113,6 +116,9 @@ class Collabs extends Component {
         id ="vibrant_matter"
         onClick={() => this.openModal(2) }
         >
+          <h2>
+                Vibrant Matter
+              </h2>
           <div className={styles.overlay} >
           <h2>
                 Vibrant Matter
@@ -129,6 +135,9 @@ class Collabs extends Component {
         <div className={ `${styles.paralax} ${styles.project}` } 
           style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}
           onClick={() => this.openModal(3) }>
+            <h2>
+              VR Screensavers
+            </h2>
           <div className={styles.overlay} >
             <h2>
               VR Screensavers

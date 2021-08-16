@@ -32,7 +32,7 @@ class Work extends Component {
   }
 
   openModal(modalId) {
-    switch(modalId) {
+    switch (modalId) {
       case 1:
         this.setState({ title: "Prismatic Paradise" })
         break;
@@ -68,12 +68,16 @@ class Work extends Component {
         <FadeIn delay={200} transitionDuration={600}>
           <div className={`${styles.paralax} ${styles.project}`}
             style={{ backgroundImage: `url("/assets/work/prismatic_paradise.jpg")` }}
+            onClick={() => this.openModal(1)}
           >
-            <div className={styles.overlay} onClick={() => this.openModal(1)}>
+            <h2>
+              Prismatic Paradise
+            </h2>
+            <div className={styles.overlay} >
               <h2>
                 Prismatic Paradise
             </h2>
-            <p className={styles.hide}>
+              <p className={styles.hide}>
                 {/* <img src="/assets/work/prismatic_paradise.jpg" alt="Logo" id="targetimg" width="100%" border-radius="10px"/> */}
             Part of Summer Sweet Wave exhibition on the massive SVLA1 screen, downtown Los Angeles.
             </p>
@@ -82,43 +86,55 @@ class Work extends Component {
 
 
           <div className={`${styles.paralax} ${styles.project}`}
-            style={{ backgroundImage: `url("/assets/work/eclipse_core.jpg")` }}>
-            <div className={styles.overlay} onClick={() => this.openModal(2)}>
+            style={{ backgroundImage: `url("/assets/work/eclipse_core.jpg")` }}
+            onClick={() => this.openModal(2)}>
+            <h2>
+              Eclipse Core
+            </h2>
+            <div className={styles.overlay} >
               <h2>
                 Eclipse Core
             </h2>
-            <p className={styles.hide}>
+              <p className={styles.hide}>
                 Video exhibited as part of the Eclipsecore exhibition curated by Rick Silva.
             </p>
             </div>
           </div>
 
           <div className={`${styles.paralax} ${styles.project}`}
-            style={{ backgroundImage: `url("/assets/work/bloom.jpg")` }}>
-            <div className={styles.overlay} onClick={() => this.openModal(3)}>
+            style={{ backgroundImage: `url("/assets/work/bloom.jpg")` }}
+            onClick={() => this.openModal(3)}>
+            <h2>
+              Bloom
+            </h2>
+            <div className={styles.overlay} >
               <h2>
                 Bloom
             </h2>
-            <p className={styles.hide}>
+              <p className={styles.hide}>
                 Details ...
             </p>
             </div>
           </div>
 
           <div className={`${styles.paralax} ${styles.project}`}
-            style={{ backgroundImage: `url("/assets/work/liminal_realities.jpg")` }}>
-            <div className={styles.overlay} onClick={() => this.openModal(4)}>
+            style={{ backgroundImage: `url("/assets/work/liminal_realities.jpg")` }}
+            onClick={() => this.openModal(4)}>
+            <h2>
+              Liminal Realities
+            </h2>
+            <div className={styles.overlay} >
               <h2>
                 Liminal Realities
             </h2>
-            <p className={styles.hide}>
-                3VR: Liminal Realities is an exploration of visual music and optical illusion. 
+              <p className={styles.hide}>
+                3VR: Liminal Realities is an exploration of visual music and optical illusion.
                 {/* It has been curated into various showcases including the Toronto Film Festival&apos;s TIFFxPOP series, Oculus DevLab, Slamdance, SXSW, and VR Scout&apos;s VR Art Show, hosted by VICE and Pulse. */}
-            </p>
+              </p>
             </div>
           </div>
         </FadeIn>
-        <ProjModal modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} modalId={this.state.modalId} title={this.state.title}/>
+        <ProjModal modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} modalId={this.state.modalId} title={this.state.title} />
 
       </div>
 

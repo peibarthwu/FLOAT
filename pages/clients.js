@@ -13,7 +13,6 @@ const projData = {
 
 class Clients extends Component {
 
-
   constructor() {
     super();
 
@@ -23,6 +22,7 @@ class Clients extends Component {
       modalId: 0,
       title: "sample title",
       description: "sample description",
+      images: [],
     };
 
     this.open = this.open.bind(this);
@@ -43,16 +43,35 @@ class Clients extends Component {
   openModal(modalId) {
     switch(modalId) {
       case 1:
-        this.setState({ title: "Life After B.O.B" })
+        this.setState({ title: "Life After B.O.B" ,
+        description: "life after bob description",
+        images:
+        [
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+        ] })
         break;
       case 2:
-        this.setState({ title: "United Nude" })
+        this.setState({ title: "United Nude",
+        description: "United Nude description",
+        images:
+        [
+          { url: "assets/clients/iancheng.jpg" },
+          { url: "assets/clients/iancheng.jpg" },
+          { url: "assets/clients/iancheng.jpg" },
+        ] })
         break;
       case 3:
-        this.setState({ title: "Glitchmob x Strangeloop" })
+        this.setState({ title: "Glitchmob x Strangeloop" ,
+        description: "Glitchmob description",
+        images:
+        [
+          { url: "assets/clients/iancheng.jpg" },
+          { url: "assets/clients/iancheng.jpg" },
+          { url: "assets/clients/iancheng.jpg" },
+        ] })
         break;
-      default:
-        text = "title";
     }
     this.setState({
       modalId,
@@ -72,8 +91,12 @@ class Clients extends Component {
 
         <FadeIn delay={200} transitionDuration={600}>
           <div className={`${styles.paralax} ${styles.project}`}
-            style={{ backgroundImage: `url("/assets/clients/iancheng.jpg")` }}>
-            <div className={styles.overlay} onClick={() => this.openModal(1)}>
+            style={{ backgroundImage: `url("/assets/clients/iancheng.jpg")` }}
+            onClick={() => this.openModal(1)}>
+              <h2>
+                Ian Cheng
+            </h2>
+            <div className={styles.overlay}>
               <h2>
                 Ian Cheng
             </h2>
@@ -85,11 +108,15 @@ class Clients extends Component {
 
 
           <div className={`${styles.paralax} ${styles.project}`}
-            style={{ backgroundImage: `url("/assets/clients/unitednude.jpg")` }}>
-            <div className={styles.overlay} onClick={() => this.openModal(2)}>
+            style={{ backgroundImage: `url("/assets/clients/unitednude.jpg")` }}
+            onClick={() => this.openModal(2)}>
               <h2>
                 United Nude
-          </h2>
+              </h2>
+            <div className={styles.overlay} >
+              <h2>
+                United Nude
+              </h2>
           <p className={styles.hide}>
                 AR installation at  <a href="https://unitednude.com/"> United Nudes </a> pop-up in Westfield CC. Product videos, zero-G plant-life, and reactive simulations.
           </p>
@@ -97,8 +124,12 @@ class Clients extends Component {
           </div>
 
           <div className={`${styles.paralax} ${styles.project}`}
-            style={{ backgroundImage: `url("/assets/clients/glitchmob.png")` }}>
-            <div className={styles.overlay} onClick={() => this.openModal(3)}>
+            style={{ backgroundImage: `url("/assets/clients/glitchmob.png")` }}
+            onClick={() => this.openModal(3)}>
+              <h2>
+                Glitchmob x Strangeloop
+            </h2>
+            <div className={styles.overlay}>
               <h2>
                 Glitchmob x Strangeloop
             </h2>
@@ -108,7 +139,7 @@ class Clients extends Component {
             </div>
           </div>
         </FadeIn>
-        <ProjModal modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} modalId={this.state.modalId} title={this.state.title}/>
+        <ProjModal modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} modalId={this.state.modalId} title={this.state.title} description={this.state.description} images={this.state.images}/>
 
       </div>
 

@@ -2880,6 +2880,11 @@
   "resolved" "https://registry.npmjs.org/react-fade-in/-/react-fade-in-2.0.1.tgz"
   "version" "2.0.1"
 
+"react-image-gallery@^1.2.7":
+  "integrity" "sha512-ts7yMWykvZhslGMuvVAUk7a1dJIx9QtIwK6Clv8dOGxPsJid92FRrLvXbZDvkYcUyj48sHalnBhqU6mZNCB2jg=="
+  "resolved" "https://registry.npmjs.org/react-image-gallery/-/react-image-gallery-1.2.7.tgz"
+  "version" "1.2.7"
+
 "react-is@^16.3.2":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -2929,6 +2934,11 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   "version" "0.8.3"
 
+"react-simple-image-slider@^2.1.2":
+  "integrity" "sha512-XpxnDEJF/HXMiGhdJNRkmCL1graacFbymPTz1DfVocM/9peU356CoOi4DkRxC8AEz4dZilme0njwBcSeWcDrXQ=="
+  "resolved" "https://registry.npmjs.org/react-simple-image-slider/-/react-simple-image-slider-2.1.2.tgz"
+  "version" "2.1.2"
+
 "react-transition-group@^4.4.1":
   "integrity" "sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg=="
   "resolved" "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.2.tgz"
@@ -2939,7 +2949,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^16.8 || 17", "react@^16.8.0 || ^17.0.0", "react@^17.0.2", "react@>=0.14.0", "react@>=15.0.0", "react@>=16.14.0", "react@>=16.3.0", "react@>=16.3.2", "react@>=16.6.0", "react@>=16.8.0", "react@>=16.x", "react@15.x.x || 16.x.x || 17.x.x", "react@17.0.2":
+"react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^16.0.0 || ^17.0.0", "react@^16.8 || 17", "react@^16.8.0 || ^17.0.0", "react@^17.0.2", "react@>=0.14.0", "react@>=15.0.0", "react@>=16.14.0", "react@>=16.3.0", "react@>=16.3.2", "react@>=16.6.0", "react@>=16.8.0", "react@>=16.x", "react@15.x.x || 16.x.x || 17.x.x", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
