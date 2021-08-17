@@ -48,7 +48,7 @@ class Clients extends Component {
         images:
         [
           "/assets/clients/iancheng.jpg" ,
-          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/unitednude.jpg" ,
           "/assets/clients/iancheng.jpg" ,
         ] })
         break;
@@ -57,9 +57,9 @@ class Clients extends Component {
         description: "United Nude description",
         images:
         [
-          { url: "assets/clients/iancheng.jpg" },
-          { url: "assets/clients/iancheng.jpg" },
-          { url: "assets/clients/iancheng.jpg" },
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/unitednude.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
         ] })
         break;
       case 3:
@@ -67,9 +67,9 @@ class Clients extends Component {
         description: "Glitchmob description",
         images:
         [
-          { url: "assets/clients/iancheng.jpg" },
-          { url: "assets/clients/iancheng.jpg" },
-          { url: "assets/clients/iancheng.jpg" },
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
         ] })
         break;
     }

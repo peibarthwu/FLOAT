@@ -13,7 +13,9 @@ class Work extends Component {
       isOpened: false,
       modalIsOpen: false,
       modalId: 0,
-      title: "default title"
+      title: "default title",
+      description: "",
+      images: []
     };
 
     this.open = this.open.bind(this);
@@ -34,19 +36,45 @@ class Work extends Component {
   openModal(modalId) {
     switch (modalId) {
       case 1:
-        this.setState({ title: "Prismatic Paradise" })
+        this.setState({ title: "Prismatic Paradise" ,
+        description: "FLOAT Museum description",
+        images:
+        [
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+        ] })
         break;
       case 2:
-        this.setState({ title: "Eclipse Core" })
+        this.setState({ title: "Eclipse Core" ,
+        description: "FLOAT Museum description",
+        images:
+        [
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+        ] })
         break;
       case 3:
-        this.setState({ title: "Bloom" })
+        this.setState({ title: "Bloom" ,
+        description: "FLOAT Museum description",
+        images:
+        [
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+        ] })
         break;
       case 4:
-        this.setState({ title: "Liminal Realities" })
+        this.setState({ title: "Liminal Realities" ,
+        description: "FLOAT Museum description",
+        images:
+        [
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+        ] })
         break;
-      default:
-        text = "title";
     }
     this.setState({
       modalId,
@@ -134,7 +162,7 @@ class Work extends Component {
             </div>
           </div>
         </FadeIn>
-        <ProjModal modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} modalId={this.state.modalId} title={this.state.title} />
+        <ProjModal modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} modalId={this.state.modalId} title={this.state.title}  description={this.state.description} images={this.state.images}/>
 
       </div>
 

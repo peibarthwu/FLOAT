@@ -54,11 +54,14 @@ const ImageSlider = ({ images }) => { // takes in images as props
 
     return (
         images.length > 0 && (
+            <div className={styles.buttons}>
             <div className={styles.sliderContainer}>
-                <img src={images[index]} alt={index} />
-                <button onClick={slideLeft}>{"<"}</button>
-                <button onClick={slideRight}>{">"}</button>
+                <Image src={images[index]} alt={index} layout={'fill'}/>
             </div>
+            <button className={styles.sliderButton} onClick={slideLeft}>{" < "}</button>
+            <button className={styles.sliderButton} onClick={slideRight}>{" > "}</button>
+            </div>
+           
         )
     );
 };

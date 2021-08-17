@@ -31,50 +31,115 @@ export default function Work() {
 
         <div className={styles.info}>
           <div className={styles.aboutSection}>
-            <p>
-              FLOAT IS A COLLABORATIVE ENTITY FOCUSING ON THE INTERSECTION OF ART AND INTERACTIVITY.
-              FOUNDERS BEN VANCE AND KATE PARSONS WORK TOGETHER TO CREATE EVOCATIVE, NUANCED ART EXPERIENCES.
-
+            <h2>
+            FLOAT IS A COLLABORATIVE ENTITY FOCUSING ON THE INTERSECTION OF ART AND INTERACTIVITY. 
+          </h2>
+          <p>
+          Founders Ben Vance and Kate Parsons work together to create evocative, nuanced art experiences that push the boundaries of process and technique. Their work has shown with Vulcan Inc., Marina Abramovic’s Acute Art VR Platform, and at prestigious locations such as SFMOMA, Art Toronto, Sundance Film Festival, SXSW, and TIFF. Their work has been featured in Art News, Filmmaker Magazine, the LA Times, CBC, BBC News, Flaunt, Hyperallergic, and more. Collaborators and clients include Petra Cortright, United Nude, GitHub, and Tony Hawk. Their latest work, Screensavers, can be found on internet gaming platforms Steam, Oculus, Itch.io, and Viveport.
           </p>
 
             <p>
-              Ben Vance is a VR veteran and director who explores art and design through emerging technology.
-              He has worked with Electronic Arts, independent game studios, VR startups, museums, galleries, and with hummingbirds on back patios surrounded by succulents.
-              He is a founding member of Glitch City, a pioneering art and game collective based in LA, and Buffalo Vision, his studio dedicated to games and interactive VR.
+            <b> KATE</b> is a video artist and educator living in Los Angeles. She obtained her M.F.A. in Media Arts from UCLA and an M.A. in Digital Art and Video from CSU-N. She is the co-founder of FLOAT, founder of Stickney Creek, a rural art residency, and founder of FEMMEBIT, a video art festival celebrating Los Angeles female-identifying artists working in video and new media. Much of Kate's practice surrounds human connection, meaning-making, and our relationships to the biological and environmental systems we inhabit. Her graduate studies involved research into the myriad ways humans mourn and express grief. She has participated in solo and group residencies at Stanford University, Signal Culture, The Media Archaeology Lab at the University of Colorado, Dublab, and Coaxial Arts Foundation (courtesy of the Pasadena Arts Council). She is an Assistant Professor in Digital Arts at Pepperdine University in Malibu, CA, and Instructor in Media Design Practices at Art Center College of Design in Pasadena, CA. She has had the pleasure of working with director Mark Pellington, Toro Y Moi, Kid606, and Daedelus, as well as brands such as Aston Martin and T-Mobile.
           </p>
             <p>
-              His work has been shown worldwide at Sundance, IndieCade, NAB Shanghai, and TIFF. His thoughtful and surprising interaction design stem from a lifelong pursuit of fine art and button pushing.
-          </p>
+            <b> BEN</b> is a VR veteran who explores art and design through emerging technology. He has worked with Electronic Arts, independent game studios, XR startups, museums, galleries, and with hummingbirds on back patios surrounded by succulents. His first foray into VR was in early C.A.V.E. systems at Iowa State University, and he is best known for his space exploration experience Irrational Exuberance: Prologue, and his work on WeVR’s The Blu.           </p>
             <p>
-              Kate Parsons is a video artist and educator living in Los Angeles. She obtained her M.F.A. in Media Arts from UCLA, and completed her M.A. in Digital Art and Video from CSUN.
-              She is the Director of Femmebit, a video art festival celebrating LA-based female artists working in video and new media.
-              She is currently Visiting Assistant Professor at Pepperdine University and adjunct Instructor at Art Center College of Design.
-
+            He is a founding member of Glitch City, a pioneering independent game collective based in LA and Buffalo Vision, his studio dedicated to games and interactive VR. As co-founder of FLOAT, a VR/AR art studio, he has been a guest instructor at Scripps College and CalArts, and held a VR art residency at Stanford University.
         </p>
             <p>
-              She has had the pleasure of working with director Mark Pellington and musicians such as Silversun Pickups, Toro Y Moi, Kid606, and Daedelus, as well as brands such as Aston Martin and T-Mobile.
+            His work has shown with Vulcan Inc., Acute Art’s VR Platform, and at prestigious locations such as SFMOMA, Art Toronto, Sundance Film Festival, SXSW, and TIFF. His work has been featured in The Verge, The LA Times, BBC News, Flaunt, PC Gamer, Forbes, Paste, and more. Ben has worked on projects with Steven Spielberg, Kaleidoscope, Within, Messhof, and with clients such as GitHub and Tony Hawk. His latest collaboration, Screensavers VR, can be found on internet gaming platforms Steam, Oculus, Itch.io, and Viveport. His work can also be seen in the new immersive releases Harry Potter: Chaos at Hogwarts and Wizards Take Flight. 
 
          </p>
+         <h2>
+         ESTABLISHED IN 2015.
+         </h2>
           </div>
 
           <div className={styles.aboutSection}>
-            <h2 >
-              Residencies
-        </h2>
+            <h1 >
+            Upcoming
+        </h1>
             <p>
-              Artist in Residence, Media Archaeology Lab, University of Colorado, Boulder, CO (Upcoming)
+            Publication, <i>Screensavers VR</i>, Bossfight Books (Spring 2022)
         </p>
-            <p>
-              Artists in Residence, Stanford Arts, Palo Alto, CA (Oct. 2018)
+        <h1>
+          2021
+        </h1>
+        <p>
+
+        2021 Publication, <i> The Art of The Screensaver</i>, ed. Mary Meixner, Czech Republic (Winter 2021)
         </p>
-            <p>
-              Artist in Residence, Coaxial Arts Foundation and Pasadena Arts Alliance, Los Angeles, CA (April 2018)
+        <p>
+        Ongoing: NFT sales Live on Foundation.app
         </p>
+        <p>
+        Guest Artist, Computational Media, Scripps College, Claremont (Mar.-May 2021)
+        </p>
+        <p>
+        Publication, <a href="https://coaxialarts.square.site/product/coaxialbook2021/34?cs=true&cst=custom"> Coaxial Art Book</a>, Coaxial Arts Foundation, Los Angeles (May 2021)
+        </p>
+        <h1>
+          2020
+        </h1>
+        <p>
+        Catalogue, To Bough and To Bend, Bridge Projects, Los Angeles (Aug. 2020)
+        </p>
+        <p>
+        Phenomenology of Hope, Virtual Gallery and Exhibit (Jul. 2020)
+        </p>
+        <p>
+        Guest Speaker, VRTO, Toronto, Canada (Jun. 2020)
+        </p>
+        <p>
+        To Bough and To Bend, Bridge Projects, Los Angeles, CA (Mar. 2020)
+        </p>
+        <p>
+        AR Art Show: Beyond Baroque, Mike Kelly Gallery, Santa Monica, CA (Feb. 2020)
+        </p>
+        <p>
+        Retrograde, Carnegie Art Museum, Oxnard, CA (Jan. 2020)
+        </p>
+        <h1>2019</h1>
+        <p>
+        B-Reel After Hours, Santa Monica, CA (Dec. 2019)
+        </p>
+        <p>
+        Guest Speaker, w/Ali Momeni, Brown University, Providence, RI (Nov. 2019)
+        </p>
+        <p>
+        Guest Speaker and Demo Night, Payson Library, Pepperdine University, Malibu, CA (Nov. 2019)
+        </p>
+        <p>
+        Scoutfest, VR Scout. CTRL+ Collective, Playa Vista, CA (Nov. 2019)
+        </p>
+        <p>
+        IndieCade 2019 Night Games, Center for Media and Design, Santa Monica College (Oct. 2019)
+        </p>
+        <p>
+        FIVARS Festival,Toronto Media Arts Centre, Toronto Canada (Sept. 2019)
+        </p>
+        <p>
+        Floating Signifiers, STACKED Art Show, Museum of Neon Art, Glendale CA (Sept. 2019)
+        </p>
+        <p>
+        Sim Cinema, ft. Jennifer Steinkamp, Casey Reas, DiMoDa, Paolo Pedercini, Michael John Kelley. Wevr, Venice CA (Apr. 2019)
+        </p>
+        <p>
+        Satellite Art Fair: FLOAT x Petra Cortright, Austin, TX (Apr. 2019)
+        </p>
+        <p>
+        United Nude x FLOAT Augmented Reality Pop-Up, Westfield Century City, Century City, CA (Mar. 2019)
+        </p>
+        <p>
+        A Piece of Something Bigger: Faculty Work in Progress Show + Q&A, Art Center College of Design,Pasadena, CA (Mar. 2019)
+        </p>
+
+
+
           </div>
           <div className={styles.aboutSection}>
-            <h2 >
-              Exhibitions
-        </h2>
+
+
             <h1>
               2018
         </h1>

@@ -41,7 +41,9 @@ class Collabs extends Component {
       isOpened:  false,
       modalIsOpen: false,
       modalId: 0,
-      title: "default title"
+      title: "default title",
+      description: "",
+      images: []
     };
 
     this.open = this.open.bind(this);
@@ -62,13 +64,34 @@ class Collabs extends Component {
   openModal(modalId) {
     switch(modalId) {
       case 1:
-        this.setState({ title: "FLOAT Museum @ SFMOMA" })
+        this.setState({ title: "FLOAT Museum @ SFMOMA",
+        description: "FLOAT Museum description",
+        images:
+        [
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+        ] })
         break;
       case 2:
-        this.setState({ title: "Vibrant Matter" })
+        this.setState({ title: "Vibrant Matter" ,
+        description: "Vibrant Matter description",
+        images:
+        [
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+        ] })
         break;
       case 3:
-        this.setState({ title: "VR Screensavers" })
+        this.setState({ title: "VR Screensavers"  ,
+        description: "VR Screensavers description",
+        images:
+        [
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+          "/assets/clients/iancheng.jpg" ,
+        ] })
         break;
       default:
         text = "title";
@@ -150,7 +173,7 @@ class Collabs extends Component {
           </div>
           {/* </Link> */}
           </FadeIn>
-          <ProjModal modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} modalId={this.state.modalId} title={this.state.title}/>
+          <ProjModal modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} modalId={this.state.modalId} title={this.state.title} description={this.state.description} images={this.state.images}/>
 
         </div>
 
