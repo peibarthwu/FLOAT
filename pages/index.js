@@ -5,9 +5,14 @@ import Link from 'next/link'
 import Portfolio from './/portfolio'
 import Image from 'next/image'
 import floaticon from "../public/assets/icons/logofooter.png"
+import React, { Component } from "react";
+import Screensavers from './/screensavers'
+import About from './/about'
 
 
-export default function Home() {
+class Home extends Component {
+
+render() {
 
   function showImage(image) {
     var elem = document.getElementById("targetimg");
@@ -20,6 +25,7 @@ export default function Home() {
 
 
   return (
+
     <div className={styles.container}>
       <Head>
         <title>Float.Land</title>
@@ -29,16 +35,15 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet" />
       </Head>
+
       <div>
-        <video autoPlay muted loop className={styles.fullscreen} id="targetimg">
+        <video autoPlay muted loop playsInline className={styles.fullscreen} id="targetimg">
           <source src="/assets/home/glitchmob.mp4" type="video/mp4" />
         </video>
       </div>
       <div className={styles.above}>
         <h1 className={styles.title}>
-        {/* <img src="/assets/icons/logofooter.png" alt="Girl in a jacket" width='20%'/> */}
-        {/* FLOAT.LAND */}
-        <Image src={floaticon} alt="FLOAT.LAND" />
+          <Image src={floaticon} alt="FLOAT.LAND" />
         </h1>
       </div>
 
@@ -68,3 +73,5 @@ export default function Home() {
     </div>
   )
 }
+}
+export default Home;

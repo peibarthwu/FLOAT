@@ -93,6 +93,7 @@ class Portfolio extends Component {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
         </Head>
+
         <div>
           <div className={styles.section}>
             <p onClick={this.handleClickWork}>
@@ -123,6 +124,7 @@ class Portfolio extends Component {
         <Expand open={this.state.collabs} duration={800}>
           <Collabs />
         </Expand>
+
       </div>
 
 

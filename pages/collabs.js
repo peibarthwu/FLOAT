@@ -3,6 +3,7 @@ import FadeIn from 'react-fade-in';
 import React, { Component } from "react";
 import ProjModal from './/modals';
 import Expand from 'react-expand-animated';
+import Link from 'next/link'
 
 
 const customStyles = {
@@ -68,9 +69,7 @@ class Collabs extends Component {
         description: "FLOAT Museum description",
         images:
         [
-          "/assets/clients/iancheng.jpg" ,
-          "/assets/clients/iancheng.jpg" ,
-          "/assets/clients/iancheng.jpg" ,
+          "/assets/screensavers/Evening Dreams - Tunn02.jpg",
         ] })
         break;
       case 2:
@@ -78,9 +77,7 @@ class Collabs extends Component {
         description: "Vibrant Matter description",
         images:
         [
-          "/assets/clients/iancheng.jpg" ,
-          "/assets/clients/iancheng.jpg" ,
-          "/assets/clients/iancheng.jpg" ,
+          "/assets/screensavers/Evening Dreams - Tunn02.jpg",
         ] })
         break;
       case 3:
@@ -88,9 +85,9 @@ class Collabs extends Component {
         description: "VR Screensavers description",
         images:
         [
-          "/assets/clients/iancheng.jpg" ,
-          "/assets/clients/iancheng.jpg" ,
-          "/assets/clients/iancheng.jpg" ,
+          "/assets/screensavers/Zap02.jpg",
+          "/assets/screensavers/Evening Dreams - Tunn02.jpg",
+          "/assets/screensavers/Evening Dreams - Gluten Gliders01.jpg",
         ] })
         break;
       default:
@@ -109,6 +106,7 @@ class Collabs extends Component {
   render() {
 
       return (
+        
         <div className={`${styles.main} ${styles.blackBackground}`}>
         
 
@@ -118,7 +116,7 @@ class Collabs extends Component {
         id ="floatmuseum"
         onClick={() => this.openModal(1) }
         >
-          <h2 > 
+          <h2 className={styles.third}> 
           FLOAT Museum @ SFMOMA
           </h2>
           <div className={styles.overlay} >
@@ -139,7 +137,7 @@ class Collabs extends Component {
         id ="vibrant_matter"
         onClick={() => this.openModal(2) }
         >
-          <h2>
+          <h2 className={styles.third}>
                 Vibrant Matter
               </h2>
           <div className={styles.overlay} >
@@ -154,11 +152,11 @@ class Collabs extends Component {
           </div>
         </div>
 
-        {/* <Link href="/screensavers"> */}
+        <Link href="/screensavers">
         <div className={ `${styles.paralax} ${styles.project}` } 
-          style={{ backgroundImage: `url("/assets/work/vr_screensavers.jpg")` }}
-          onClick={() => this.openModal(3) }>
-            <h2>
+          style={{ backgroundImage: `url("/assets/screensavers/Zap02.jpg")` }}
+          >
+            <h2 className={styles.third}>
               VR Screensavers
             </h2>
           <div className={styles.overlay} >
@@ -171,7 +169,7 @@ class Collabs extends Component {
             </p>
             </div>
           </div>
-          {/* </Link> */}
+          </Link>
           </FadeIn>
           <ProjModal modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} modalId={this.state.modalId} title={this.state.title} description={this.state.description} images={this.state.images}/>
 

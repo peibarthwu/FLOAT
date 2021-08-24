@@ -5,8 +5,12 @@ import FadeIn from 'react-fade-in';
 import Image from 'next/image'
 import floaticon from "../public/assets/icons/logofooter.png"
 import ThreeScene from './/threescene';
+import React, { Component } from 'react';
 
-export default function Work() {
+
+class About extends Component {
+
+  render() {
   return (
     <div className={styles.container}>
       <Head>
@@ -39,7 +43,7 @@ export default function Work() {
           </p>
 
             <p>
-            <b> KATE</b> is a video artist and educator living in Los Angeles. She obtained her M.F.A. in Media Arts from UCLA and an M.A. in Digital Art and Video from CSU-N. She is the co-founder of FLOAT, founder of Stickney Creek, a rural art residency, and founder of FEMMEBIT, a video art festival celebrating Los Angeles female-identifying artists working in video and new media. Much of Kate's practice surrounds human connection, meaning-making, and our relationships to the biological and environmental systems we inhabit. Her graduate studies involved research into the myriad ways humans mourn and express grief. She has participated in solo and group residencies at Stanford University, Signal Culture, The Media Archaeology Lab at the University of Colorado, Dublab, and Coaxial Arts Foundation (courtesy of the Pasadena Arts Council). She is an Assistant Professor in Digital Arts at Pepperdine University in Malibu, CA, and Instructor in Media Design Practices at Art Center College of Design in Pasadena, CA. She has had the pleasure of working with director Mark Pellington, Toro Y Moi, Kid606, and Daedelus, as well as brands such as Aston Martin and T-Mobile.
+            <b> KATE</b> is a video artist and educator living in Los Angeles. She obtained her M.F.A. in Media Arts from UCLA and an M.A. in Digital Art and Video from CSU-N. She is the co-founder of FLOAT, founder of Stickney Creek, a rural art residency, and founder of FEMMEBIT, a video art festival celebrating Los Angeles female-identifying artists working in video and new media. Much of Kate&apos;s practice surrounds human connection, meaning-making, and our relationships to the biological and environmental systems we inhabit. Her graduate studies involved research into the myriad ways humans mourn and express grief. She has participated in solo and group residencies at Stanford University, Signal Culture, The Media Archaeology Lab at the University of Colorado, Dublab, and Coaxial Arts Foundation (courtesy of the Pasadena Arts Council). She is an Assistant Professor in Digital Arts at Pepperdine University in Malibu, CA, and Instructor in Media Design Practices at Art Center College of Design in Pasadena, CA. She has had the pleasure of working with director Mark Pellington, Toro Y Moi, Kid606, and Daedelus, as well as brands such as Aston Martin and T-Mobile.
           </p>
             <p>
             <b> BEN</b> is a VR veteran who explores art and design through emerging technology. He has worked with Electronic Arts, independent game studios, XR startups, museums, galleries, and with hummingbirds on back patios surrounded by succulents. His first foray into VR was in early C.A.V.E. systems at Iowa State University, and he is best known for his space exploration experience Irrational Exuberance: Prologue, and his work on WeVR’s The Blu.           </p>
@@ -364,3 +368,5 @@ export default function Work() {
     </div>
   )
 }
+}
+export default About;

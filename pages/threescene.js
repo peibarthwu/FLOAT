@@ -149,7 +149,7 @@ class ThreeScene extends Component {
 
     window.addEventListener( 'mousemove', onMouseMove, false );
     function onMouseMove(){
-      material.uniforms.utime.value +=0.009;
+      material.uniforms.utime.value +=0.005;
     }
   }
 
